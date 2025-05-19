@@ -32,7 +32,7 @@ jobs:
         id: check_script
         env:
           # CHANGE THIS to your Docker Hub repository name
-          CUSTOM_REPOSITORY_NAME_IMAGE: "caddybuilds/caddy-cloudflare"
+          CUSTOM_REPOSITORY_NAME_IMAGE: "${{ secrets.DOCKERHUB_USERNAME }}/caddy-cloudflare"
           # CHANGE THIS if your tags start with 'v' (e.g., use 'v') 
           CUSTOM_REPOSITORY_TAG_PREFIX: ""
         run: python scripts/check_caddy_status.py
